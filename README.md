@@ -14,7 +14,7 @@
   Capture live network traffic and see who talks to your machine
 </p>
 
-## PacketWatch
+## Overview
 This tools is designed to monitor packets in the network with an easy and understandable UI window for users to detect and watch the packets comming through there and leaving their device.
 
 ## Installation
@@ -22,12 +22,16 @@ Two libraries where used in this project:
 - Scapy (for capturing packets)
 - PySide6 (UI)
 
-commands:
 ```bash
 sudo apt install -y python3-scapy
 pip install PySide6
 ```
 
+## Usage
+After installing the needed libraries:
+```bash
+sudo python3 Dashboard.py
+```
 ## Dashboard
 The dashboard window contains the following information about the netwerk traffic:
 - Number of packets
