@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  Capture live network traffic and see who talks to your machine.
+  Capture live network traffic and see who talks to your machine
 </p>
 
 PacketWatch
