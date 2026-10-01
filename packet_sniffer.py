@@ -49,3 +49,6 @@ def get_snapshot(top=10):
             "src": stats["src"].most_common(top),
             "ports": stats["ports"].most_common(top),
         }
+
+
+_dns_cache = {}
