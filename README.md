@@ -23,7 +23,10 @@ Two libraries where used in this project:
 - PySide6 (UI)
 
 commands:
-
+```bash
+sudo apt install -y python3-scapy
+pip install PySide6
+```
 
 ## Dashboard
 The dashboard window contains the following information about the netwerk traffic:
