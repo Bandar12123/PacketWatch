@@ -60,3 +60,13 @@ def _lookup(ip):
     except Exception:
         name = ""
     _dns_cache[ip] = name
+
+
+def hostname_of(ip):
+    if ip not in _dns_cache:
+        if ":" in ip:
+            _dns_cache[ip] = ""
+        else:
+            _dns_cache[ip] = None
+            threading.Thread(target=_lookup, args=(ip,), daemon=True).start()
+        return _dns_cache[ip]
