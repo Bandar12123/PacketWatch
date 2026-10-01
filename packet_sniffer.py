@@ -37,15 +37,15 @@ def handle(pkt):
 
 def start_sniffing():
     threading.Thread(target=lambda: sniff(prn=handle, store=False),
-                     daemon=True).start()
+                    daemon=True).start()
 
 def get_snapshot(top=10):
     with lock:
-        return(
+        return{
             "total": stats["total"], "bytes": stats["bytes"],
             "uptime": int(time.time() - start_time),
             "tcp": stats["tcp"], "udp": stats["udp"],
             "icmp": stats["icmp"], "other": stats["other"],
             "src": stats["src"].most_common(top),
             "ports": stats["ports"].most_common(top),
-        )
+        }
