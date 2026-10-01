@@ -1,8 +1,7 @@
-import threading , time, socket
+import time, threading, socket
 from collections import Counter
 
 from scapy.all import sniff, IP, TCP, UDP, ICMP
-
 
 stats = {
     "total": 0, "bytes": 0,
@@ -15,7 +14,7 @@ start_time = time.time()
 
 
 def handle(pkt):
-    src = pkt[IP].src if pkt.haslayer(IP) else getattr(pkt, "src", "Unknown")
+    src = pkt[IP].src if pkt.haslayer(IP) else getattr(pkt, "src", "unknown")
 
     if pkt.haslayer(IP) and pkt.haslayer(TCP):
         proto, port = "tcp", pkt[TCP].dport
@@ -37,11 +36,12 @@ def handle(pkt):
 
 def start_sniffing():
     threading.Thread(target=lambda: sniff(prn=handle, store=False),
-                    daemon=True).start()
+                     daemon=True).start()
+
 
 def get_snapshot(top=10):
     with lock:
-        return{
+        return {
             "total": stats["total"], "bytes": stats["bytes"],
             "uptime": int(time.time() - start_time),
             "tcp": stats["tcp"], "udp": stats["udp"],
@@ -69,4 +69,4 @@ def hostname_of(ip):
         else:
             _dns_cache[ip] = None
             threading.Thread(target=_lookup, args=(ip,), daemon=True).start()
-        return _dns_cache[ip]
+    return _dns_cache[ip]
