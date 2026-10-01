@@ -1,4 +1,4 @@
-import threading , time
+import threading , time, socket
 from collections import Counter
 
 from scapy.all import sniff, IP, TCP, UDP, ICMP
@@ -52,3 +52,11 @@ def get_snapshot(top=10):
 
 
 _dns_cache = {}
+
+
+def _lookup(ip):
+    try:
+        name = socket.gethostbyaddr(ip)[0]
+    except Exception:
+        name = ""
+    _dns_cache[ip] = name
