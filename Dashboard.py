@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (
     QLabel, QTableWidget, QTableWidgetItem, QGroupBox, QGridLayout,
 )
 
-from sniffer import start_sniffing, get_snapshot, hostname_of
+from packet_sniffer import start_sniffing, get_snapshot, hostname_of
 
 
 def num_item(n):
