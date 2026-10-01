@@ -12,4 +12,4 @@ def num_item(n):
     def num_item(n):
     item = QTableWidgetItem(f"{n:,}")
     item.setTextAlignment(Qt.AlignRight | Qt.AlignVCenter)
-    return item
+    return item 
