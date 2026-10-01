@@ -17,3 +17,10 @@
 ## PacketWatch
 This tools is designed to monitor packets in the network with an easy and understandable UI window for users to detect and watch the packets comming through there and leaving their device.
 
+The dashboard window contains the following information about the netwerk traffic:
+- Number of packets
+- Total number of bytes
+- Uptime of the window
+- Protocols
+- IP's
+- Ports
