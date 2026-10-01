@@ -15,7 +15,7 @@
 </p>
 
 ## Overview
-This tools is designed to monitor packets in the network with an easy and understandable UI window for users to detect and watch the packets comming through there and leaving their device.
+This tool is designed to monitor packets in the network with an easy and understandable UI window for users to detect and watch the packets coming through and leaving their device.
 
 ## Requirements
 - Root Privileges (sudo for the sniff() function to capture packets)
@@ -25,7 +25,7 @@ Libraries:
 - PySide6
 
 ## Installation
-Two libraries where used in this project:
+Two libraries were used in this project:
 - Scapy (for capturing packets)
 - PySide6 (UI)
 
@@ -40,12 +40,12 @@ After installing the needed libraries:
 sudo python3 Dashboard.py
 ```
 ## Dashboard
-The dashboard window contains the following information about the netwerk traffic:
+The dashboard window contains the following information about the network traffic:
 - Number of packets
 - Total number of bytes
 - Uptime of the window
 - Protocols
-- IP's
+- IPs
 - Ports
 
 ## Authors
