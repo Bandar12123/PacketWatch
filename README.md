@@ -47,3 +47,9 @@ The dashboard window contains the following information about the netwerk traffi
 - Protocols
 - IP's
 - Ports
+
+## Authors
+
+- Ali Alnewaissr
+- Bandar AlSubhi
+- Osama Awadh
