@@ -7,7 +7,7 @@
 ![license](https://img.shields.io/badge/license-MIT-4c9a1d?style=flat-square)
 
 <p align="center">
-  <img src="assets/logo.png" width="200" alt="PacketSniffer logo">
+  <img src="assets/logo.svg" width="200" alt="PacketSniffer logo">
 </p>
 
 <p align="center">
