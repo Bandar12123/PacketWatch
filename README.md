@@ -17,6 +17,14 @@
 ## PacketWatch
 This tools is designed to monitor packets in the network with an easy and understandable UI window for users to detect and watch the packets comming through there and leaving their device.
 
+## Installation
+Two libraries where used in this project:
+- Scapy (for capturing packets)
+- PySide6 (UI)
+
+commands:
+
+
 ## Dashboard
 The dashboard window contains the following information about the netwerk traffic:
 - Number of packets
