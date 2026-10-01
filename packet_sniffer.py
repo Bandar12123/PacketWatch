@@ -34,4 +34,8 @@ def handle(pkt):
         if port is not None:
             stats["ports"][(proto, port)] += 1
 
-                                    
+
+def start_sniffing():
+    threading.Thread(target=lambda: sniff(prn=handle, store=False),
+                     daemon=True).start()
+    
